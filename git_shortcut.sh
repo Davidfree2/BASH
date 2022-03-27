@@ -45,3 +45,10 @@ function gitPush(){
 }
 
 gitPush
+
+function gitStatus(){
+	echo "current git status is"
+	git status
+}
+
+gitStatus
