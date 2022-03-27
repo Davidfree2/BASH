@@ -1,4 +1,5 @@
 #!/bin/bash
+#version 1.0.0
 
 #this file must be sourced. Use source <this file name> 
 
