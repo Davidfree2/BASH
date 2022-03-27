@@ -18,7 +18,7 @@ function gitCommit(){
 		echo "git commit -m general update"
 		git commit -m "general update"
 	else
-		echo "git commit -m ${git_message}"
+		echo $'git commit -m ${git_message}'
 		git commit -m "${git_message}"
 	fi
 }
@@ -34,7 +34,7 @@ read -p $'\nPush commit to repo? Type N to deny push, or Y to push\n' git_push_m
 function gitPush(){
 	if [ ${git_push_message} == "y" ] || [ ${git_push_message} == "Y" ]
 	then
-		echo $'\ngit pushing to repo press <ctrl + c> to cancel'
+		echo $'\ngit pushing to repo press <ctrl + c> to cancel\n'
 		sleep 3 
 		git push
 	else
