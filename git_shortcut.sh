@@ -34,18 +34,18 @@ read -p $'\nPush commit to repo? Type N to deny push, or Y to push\n' git_push_m
 function gitPush(){
 	if [ ${git_push_message} == "y" ] || [ ${git_push_message} == "Y" ]
 	then
-		echo $'\ngit pushing to repo press <ctrl + c> to cancel\n'
-		sleep 5
+		echo "git pushing to repo press <ctrl + c> to cancel"
+		sleep 3 
 		git push
 	else
-		echo $'\nupdates NOT pushed'
+		echo "updates NOT pushed"
 	fi
 }
 
 gitPush
 
 function gitStatus(){
-	echo $'\n\n\ncurrent git status is'
+	echo $'\ncurrent git status is\n'
 	git status
 }
 
