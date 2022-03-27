@@ -31,24 +31,30 @@ function gitStatus(){
 	git status
 }
 
+function main(){
+
+	read -p $'Type git commit message. Or type N for general message:\n' git_message
+	
+	echo $'\ngit adding all\n'
+	
+	sleep 1
+	
+	git add .
+	
+	gitCommit
+	
+	sleep 1
+	
+	echo $'\nSuccess! succesfully added and commited'
+	
+	read -p $'\nPush commit to repo? Type N to deny push, or Y to push:\n' git_push_message
+	
+	gitPush
+	
+	gitStatus
+
+}
+
 #-----------------------------------functions end--------------------------------
 
-read -p $'Type git commit message. Or type N for general message:\n' git_message
-
-echo $'\ngit adding all\n'
-
-sleep 1
-
-git add .
-
-gitCommit
-
-sleep 1
-
-echo $'\nSuccess! succesfully added and commited'
-
-read -p $'\nPush commit to repo? Type N to deny push, or Y to push:\n' git_push_message
-
-gitPush
-
-gitStatus
+main
