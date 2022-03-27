@@ -27,13 +27,13 @@ function gitPush(){
 }
 
 function gitStatus(){
-	echo $'\ncurrent git status is\n'
+	echo $'\ncurrent git status is:'
 	git status
 }
 
 #-----------------------------------functions end--------------------------------
 
-read -p $'Type git commit message. Or type N for general message\n' git_message
+read -p $'Type git commit message. Or type N for general message:\n' git_message
 
 echo $'\ngit adding all\n'
 
@@ -47,7 +47,7 @@ sleep 1
 
 echo $'\nSuccess! succesfully added and commited'
 
-read -p $'\nPush commit to repo? Type N to deny push, or Y to push\n' git_push_message
+read -p $'\nPush commit to repo? Type N to deny push, or Y to push:\n' git_push_message
 
 gitPush
 
