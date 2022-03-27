@@ -4,11 +4,11 @@
 #
 
 
-read -p "Type git commit message. Or type N for general message" git_message
+read -p $'Type git commit message. Or type N for general message\n' git_message
 
-echo "..."
+echo $'\n...'
 
-echo "git adding all"
+echo $'\ngit adding all\n'
 
 sleep 1
 
@@ -17,10 +17,10 @@ git add .
 function gitCommit(){
 	if [ ${git_message} == "n" ] || [ ${git_message} == "N" ]
 	then
-		echo "git commit -m 'general update'"
+		echo $'\ngit commit -m general update'
 		git commit -m "general update"
 	else
-		echo "git commit -m ${git_message}"
+		echo $'\ngit commit -m ${git_message}'
 		git commit -m "${git_message}"
 	fi
 }
@@ -29,25 +29,25 @@ gitCommit
 
 sleep 1
 
-echo "Success! succesfully added and commited"
+echo $'\nSuccess! succesfully added and commited'
 
-read -p "Push commit to repo? Type N to deny push, or Y to push" git_push_message
+read -p $'\nPush commit to repo? Type N to deny push, or Y to push\n' git_push_message
 
 function gitPush(){
 	if [ ${git_push_message} == "y" ] || [ ${git_push_message} == "Y" ]
 	then
-		echo "git pushing to repo press <ctrl + c> to cancel"
+		echo $'\ngit pushing to repo press <ctrl + c> to cancel\n'
 		sleep 5
 		git push
 	else
-		echo "updates NOT pushed"
+		echo $'\nupdates NOT pushed'
 	fi
 }
 
 gitPush
 
 function gitStatus(){
-	echo "current git status is"
+	echo $'\n\n\ncurrent git status is'
 	git status
 }
 
