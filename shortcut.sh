@@ -21,7 +21,7 @@ function gitPush(){
 	if [ ${git_push_message} == "y" ] || [ ${git_push_message} == "Y" ]
 	then
 		echo $'\ngit pushing to repo press <ctrl + c> to cancel\n'
-		sleep 3 
+		sleep 2 
 		git push
 	else
 		echo "updates NOT pushed"
