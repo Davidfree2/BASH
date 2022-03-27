@@ -30,3 +30,18 @@ gitCommit
 sleep 1
 
 echo "Success! succesfully added and commited"
+
+read -p "Push commit to repo? Type N to deny push, or Y to push" git_push_message
+
+function gitPush(){
+	if [ ${git_push_message} == "y" ] || [ ${git_push_message} == "Y" ]
+	then
+		echo "git pushing to repo press <ctrl + c> to cancel"
+		sleep 5
+		git push
+	else
+		echo "updates NOT pushed"
+	fi
+}
+
+gitPush
