@@ -15,10 +15,10 @@ git add .
 function gitCommit(){
 	if [ ${git_message} == "n" ] || [ ${git_message} == "N" ]
 	then
-		echo $'\ngit commit -m general update'
+		echo "git commit -m general update"
 		git commit -m "general update"
 	else
-		echo $'\ngit commit -m ${git_message}'
+		echo "git commit -m ${git_message}"
 		git commit -m "${git_message}"
 	fi
 }
