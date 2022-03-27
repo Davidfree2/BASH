@@ -18,7 +18,7 @@ function gitCommit(){
 		echo "git commit -m general update"
 		git commit -m "general update"
 	else
-		echo $'git commit -m ${git_message}'
+		echo "git commit -m ${git_message}"
 		git commit -m "${git_message}"
 	fi
 }
