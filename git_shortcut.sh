@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #this file must be sourced. Use source <this file name> 
-#
+
 
 read -p "Type git commit message. Or type N for general message" git_message
 
