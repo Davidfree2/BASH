@@ -1,4 +1,5 @@
 #!/bin/bash
+
 #this file must be sourced. Use source <this file name> 
 
 read -p "Type git commit message. Or type N for general message" git_message
@@ -6,6 +7,8 @@ read -p "Type git commit message. Or type N for general message" git_message
 echo "..."
 
 echo "git adding all"
+
+sleep 1
 
 git add .
 
@@ -21,5 +24,7 @@ function gitCommit(){
 }
 
 gitCommit
+
+sleep 1
 
 echo "Success! succesfully added and commited"
