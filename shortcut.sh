@@ -1,5 +1,4 @@
 #!/bin/bash
-#
 
 #this file must be sourced. Use source <this file name> 
 
