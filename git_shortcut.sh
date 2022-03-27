@@ -13,7 +13,7 @@ sleep 1
 git add .
 
 function gitCommit(){
-	if [ ${git_message} == "n" || "N" ]
+	if [ ${git_message} == "n" ] || [ ${git_message} == "N" ]
 	then
 		echo "git commit -m 'general update'"
 		git commit -m "general update"
