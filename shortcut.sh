@@ -28,7 +28,7 @@ function gitPush(){
 }
 
 function gitStatus(){
-	echo $'\ncurrent git status is:'
+	echo $'\ncurrent git status is:\n'
 	git status
 }
 
